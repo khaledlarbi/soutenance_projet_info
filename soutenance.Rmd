@@ -15,7 +15,7 @@ library("reticulate")
 
 # Travail réalisé par 
 
-![](https://keen-goldwasser-ac8c29.netlify.app/auteur_proj.png)
+![](https://soutenancensaedvfsbra.netlify.app/auteur_proj.png)
 
 # Plan de la présentation
 - Base de données
@@ -42,7 +42,7 @@ knitr::include_url(url = "https://parismutation.herokuapp.com/main", height = "7
 ## Filosofi
 
 ```{r, out.width="100%"}
-knitr::include_url(url = "https://keen-goldwasser-ac8c29.netlify.app/carte_filosofi.html", height = "600px")
+knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/carte_filosofi.html", height = "600px")
 ```
 
 ##  BPE
