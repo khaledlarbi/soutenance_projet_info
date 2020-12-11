@@ -2,7 +2,9 @@
 title: "Prédiction de la valeur foncière de bien immobilier à Paris"
 author: "Ensae"
 date: "18 décembre 2020"
-output: revealjs::revealjs_presentation
+output: 
+  revealjs::revealjs_presentation:
+    transition: slide
 ---
 
 
@@ -13,7 +15,7 @@ library("reticulate")
 
 # Travail réalisé par 
 
-![](C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\auteur_proj.png)
+![](https://keen-goldwasser-ac8c29.netlify.app/auteur_proj.png)
 
 # Plan de la présentation
 - Base de données
@@ -32,6 +34,11 @@ Ce projet s'est basé uniquement sur des données disponibles librement sur Inte
 |         [BPE](https://www.insee.fr/fr/statistiques/3568656)        |         Site de l'Insee        |                             L'offre de services                            |   Géolocalisée  | 2019                   |
 |           [ville-ideale.fr](https://www.ville-ideale.fr/)          | Webscraping de ville-ideale.fr |             L'avis des internautes  concernant leurs quartiers             |  Arrondissement | Depuis quelques années |
 
+## DVF + open
+
+```{r, out.width="100%"}
+knitr::include_url(url = "https://parismutation.herokuapp.com/main", height = "700px")
+```
 ## Filosofi
 
 ```{r, out.width="100%"}
@@ -39,6 +46,7 @@ knitr::include_url(url = "https://keen-goldwasser-ac8c29.netlify.app/carte_filos
 ```
 
 ##  BPE
+
 
 ## ville-ideale.fr
 
