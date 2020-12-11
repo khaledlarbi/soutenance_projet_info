@@ -1,5 +1,5 @@
 ---
-title: "Présentation"
+title: "Prédiction de la valeur fonctière de bien immobilier à Paris"
 author: "K. Larbi"
 date: "09/12/2020"
 output: revealjs::revealjs_presentation
@@ -7,28 +7,39 @@ output: revealjs::revealjs_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library("reticulate")
 ```
 
-## R Markdown
+# Plan de la présentation
+- Base de données
+- Modélisation
+- Limites et amélirations
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+# Base de données
 
-## Slide with Bullets
+Ce projet s'est basé uniquement sur des données disponibles librement sur Internet : 
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Dvf
+- Filosofi
+- BPE
+- ville-ideale.fr
 
-## Slide with R Output
+## Modélisation
 ```{python, eval = FALSE, echo = TRUE}
 def fonction(test):
   test += 1
   return(test)
 ```
 
-## Slide with Plot
+## Test carte
+
+```{r, out.width="100%"}
+knitr::include_url(url = "C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\m.html")
+
+```
+
+## Limites et améliorations
 
 ```{r pressure}
 plot(pressure)
