@@ -8,6 +8,7 @@ output: revealjs::revealjs_presentation
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library("reticulate")
+load("C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\carte.Rdata")
 ```
 
 # Plan de la présentation
@@ -35,8 +36,7 @@ def fonction(test):
 ## Test carte
 
 ```{r, out.width="100%"}
-knitr::include_url(url = "C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\m.html")
-
+m
 ```
 
 ## Limites et améliorations
