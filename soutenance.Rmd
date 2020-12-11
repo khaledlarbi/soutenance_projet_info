@@ -8,7 +8,6 @@ output: revealjs::revealjs_presentation
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library("reticulate")
-load("C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\carte.Rdata")
 ```
 
 # Plan de la présentation
@@ -27,6 +26,7 @@ Ce projet s'est basé uniquement sur des données disponibles librement sur Inte
 - ville-ideale.fr
 
 ## Modélisation
+
 ```{python, eval = FALSE, echo = TRUE}
 def fonction(test):
   test += 1
@@ -36,12 +36,7 @@ def fonction(test):
 ## Test carte
 
 ```{r, out.width="100%"}
-m
+knitr::include_url(url = "C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\m.html")
 ```
 
 ## Limites et améliorations
-
-```{r pressure}
-plot(pressure)
-```
-
