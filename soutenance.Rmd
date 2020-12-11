@@ -36,7 +36,7 @@ def fonction(test):
 ## Test carte
 
 ```{r, out.width="100%"}
-knitr::include_url(url = "C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\m.html")
+knitr::include_url(url = "https://keen-goldwasser-ac8c29.netlify.app/m.html")
 ```
 
 ## Limites et améliorations
