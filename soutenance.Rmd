@@ -1,14 +1,19 @@
 ---
-title: "Prédiction de la valeur fonctière de bien immobilier à Paris"
-author: "K. Larbi"
-date: "09/12/2020"
+title: "Prédiction de la valeur foncière de bien immobilier à Paris"
+author: "Ensae"
+date: "18 décembre 2020"
 output: revealjs::revealjs_presentation
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library("reticulate")
 ```
+
+# Travail réalisé par 
+
+![](C:\\Users\\khale\\OneDrive\\Bureau\\Soutenance projet info 2020\\auteur_proj.png)
 
 # Plan de la présentation
 - Base de données
@@ -20,23 +25,23 @@ library("reticulate")
 
 Ce projet s'est basé uniquement sur des données disponibles librement sur Internet : 
 
-- Dvf
-- Filosofi
-- BPE
-- ville-ideale.fr
+|                                                                    |      Mode de  récupération     |                              Informations sur                              |     Echelle     | Année                  |
+|:------------------------------------------------------------------:|:------------------------------:|:--------------------------------------------------------------------------:|:---------------:|------------------------|
+|     [DVF + open](https://cerema.app.box.com/v/dvfplus-opendata)    |         Site du Cerema         |                         Les transferts immobiliers                         |   Géolocalisée  | 2014 - 2019            |
+| [Filosofi](https://www.insee.fr/fr/metadonnees/source/serie/s1172) |         Site de l'Insee        | La situation fiscale et sociale (revenu, type de logement, démographie ..) | Carreau de 200m | 2019                   |
+|         [BPE](https://www.insee.fr/fr/statistiques/3568656)        |         Site de l'Insee        |                             L'offre de services                            |   Géolocalisée  | 2019                   |
+|           [ville-ideale.fr](https://www.ville-ideale.fr/)          | Webscraping de ville-ideale.fr |             L'avis des internautes  concernant leurs quartiers             |  Arrondissement | Depuis quelques années |
 
-## Modélisation
-
-```{python, eval = FALSE, echo = TRUE}
-def fonction(test):
-  test += 1
-  return(test)
-```
-
-## Test carte
+## Filosofi
 
 ```{r, out.width="100%"}
-knitr::include_url(url = "https://keen-goldwasser-ac8c29.netlify.app/m.html")
+knitr::include_url(url = "https://keen-goldwasser-ac8c29.netlify.app/carte_filosofi.html", height = "600px")
 ```
 
-## Limites et améliorations
+##  BPE
+
+## ville-ideale.fr
+
+# Modélisation
+
+# Limites et améliorations
