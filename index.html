@@ -1889,15 +1889,60 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </section>
 <section id="bpe" class="slide level2">
 <h2>BPE</h2>
+<ul>
+<li>Tables mises à disposition par l’Insee</li>
+<li>Informations sur le nombre de services disponibles par commune
+<ul>
+<li>Répartis en plus de 130 catégories</li>
+</ul></li>
+<li>Certains services sont géolocalisables :
+<ul>
+<li>Variable indiquant la qualité de la localisation : <code>Qualite_X_Y</code></li>
+<li>95% de bonne qualité à Paris</li>
+</ul></li>
+</ul>
 </section>
 <section id="ville-ideale.fr" class="slide level2">
 <h2>ville-ideale.fr</h2>
+<ul>
+<li>Site proposant aux internautes de noter leurs quartiers</li>
+<li>Webscrap</li>
+</ul>
+<p><img data-src="data:text/html; charset=utf-8;charset=utf-8,%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%20%20%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22utf%2D8%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice%2Dwidth%2C%20initial%2Dscale%3D1%2E0%2C%20maximum%2Dscale%3D1%2E0%2C%20user%2Dscalable%3Dno%22%3E%0A%0A%20%20%20%20%3Ctitle%3EPage%20Not%20Found%3C%2Ftitle%3E%0A%20%20%20%20%3Clink%20href%3D%27https%3A%2F%2Ffonts%2Egoogleapis%2Ecom%2Fcss%3Ffamily%3DRoboto%3A400%2C700%26subset%3Dlatin%2Clatin%2Dext%27%20rel%3D%27stylesheet%27%20type%3D%27text%2Fcss%27%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20body%20%7B%0A%20%20%20%20%20%20font%2Dfamily%3A%20%2Dapple%2Dsystem%2C%20BlinkMacSystemFont%2C%20%22Segoe%20UI%22%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%20%20%20%20%20%20background%3A%20rgb%2814%2C%2030%2C%2037%29%3B%0A%20%20%20%20%20%20color%3A%20white%3B%0A%20%20%20%20%20%20overflow%3A%20hidden%3B%0A%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20padding%3A%200%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20font%2Dsize%3A%2022px%3B%0A%20%20%20%20%20%20line%2Dheight%3A%2024px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2Emain%20%7B%0A%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex%2Ddirection%3A%20column%3B%0A%20%20%20%20%20%20align%2Ditems%3A%20center%3B%0A%20%20%20%20%20%20justify%2Dcontent%3A%20center%3B%0A%20%20%20%20%20%20height%3A%20100vh%3B%0A%20%20%20%20%20%20width%3A%20100vw%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2Ecard%20%7B%0A%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex%2Ddirection%3A%20column%3B%0A%20%20%20%20%20%20width%3A%2075%25%3B%0A%20%20%20%20%20%20max%2Dwidth%3A%20364px%3B%0A%20%20%20%20%20%20padding%3A%2024px%3B%0A%20%20%20%20%20%20background%3A%20white%3B%0A%20%20%20%20%20%20color%3A%20rgb%2814%2C%2030%2C%2037%29%3B%0A%20%20%20%20%20%20border%2Dradius%3A%208px%3B%0A%20%20%20%20%20%20box%2Dshadow%3A%200%202px%204px%200%20rgba%2814%2C%2030%2C%2037%2C%20%2E16%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20a%20%7B%0A%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%20%20%20%20%20%20font%2Dweight%3A%20600%3B%0A%20%20%20%20%20%20line%2Dheight%3A%2024px%3B%0A%20%20%20%20%20%20color%3A%20%23007067%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20a%20svg%20%7B%0A%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20top%3A%202px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20a%3Ahover%2C%0A%20%20%20%20a%3Afocus%20%7B%0A%20%20%20%20%20%20text%2Ddecoration%3A%20underline%3B%0A%20%20%20%20%20%20text%2Ddecoration%2Dcolor%3A%20%23f4bb00%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20a%3Ahover%20svg%20path%7B%0A%20%20%20%20%20%20fill%3A%20%23007067%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20p%3Alast%2Dof%2Dtype%20%7B%0A%20%20%20%20%20%20margin%2Dbottom%3A%200%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fhead%3E%0A%20%20%3Cbody%3E%0A%20%20%20%20%3Cdiv%20class%3D%22main%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22card%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22header%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%3EPage%20Not%20Found%3C%2Fh1%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22body%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cp%3ELooks%20like%20you%27ve%20followed%20a%20broken%20link%20or%20entered%20a%20URL%20that%20doesn%27t%20exist%20on%20this%20site%2E%3C%2Fp%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20id%3D%22back%2Dlink%22%20href%3D%22%2F%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23007067%22%20d%3D%22M11%2E9998836%2C4%2E09370803%20L8%2E55809517%2C7%2E43294953%20C8%2E23531459%2C7%2E74611298%208%2E23531459%2C8%2E25388736%208%2E55809517%2C8%2E56693769%20L12%2C11%2E9062921%20L9%2E84187871%2C14%20L4%2E24208544%2C8%2E56693751%20C3%2E91930485%2C8%2E25388719%203%2E91930485%2C7%2E74611281%204%2E24208544%2C7%2E43294936%20L9%2E84199531%2C2%20L11%2E9998836%2C4%2E09370803%20Z%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20Back%20to%20our%20site%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%20%20%20%20%3Chr%3E%3Cp%3EIf%20this%20is%20your%20site%2C%20and%20you%20weren%27t%20expecting%20a%20404%20for%20this%20path%2C%20please%20visit%20Netlify%27s%20%3Ca%20href%3D%22https%3A%2F%2Fcommunity%2Enetlify%2Ecom%2Ft%2Fsupport%2Dguide%2Di%2Dve%2Ddeployed%2Dmy%2Dsite%2Dbut%2Di%2Dstill%2Dsee%2Dpage%2Dnot%2Dfound%2F125%3Futm%5Fsource%3D404page%26utm%5Fcampaign%3Dcommunity%5Ftracking%22%3E%22page%20not%20found%22%20support%20guide%3C%2Fa%3E%20for%20troubleshooting%20tips%2E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%28function%28%29%20%7B%0A%20%20%20%20%20%20%20%20if%20%28document%2Ereferrer%20%26%26%20document%2Elocation%2Ehost%20%26%26%20document%2Ereferrer%2Ematch%28new%20RegExp%28%22%5Ehttps%3F%3A%2F%2F%22%20%2B%20document%2Elocation%2Ehost%29%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20document%2EgetElementById%28%22back%2Dlink%22%29%2EsetAttribute%28%22href%22%2C%20document%2Ereferrer%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%29%28%29%3B%0A%20%20%20%20%3C%2Fscript%3E%0A%20%20%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A" /></p>
 </section></section>
+<section>
 <section id="modélisation" class="title-slide slide level1">
 <h1>Modélisation</h1>
 
 </section>
-
+<section id="svr-support-vector-regression" class="slide level2">
+<h2>SVR (Support Vector Regression)</h2>
+<ul>
+<li>Sélection des variables avec la méthode Lasso : 33 variables sélectionnées</li>
+<li>Noyau choisi : gaussien</li>
+<li>Fine tuning : RandomizedSearchCV</li>
+<li>RMSE : 205 309</li>
+</ul>
+</section>
+<section id="randomforest" class="slide level2">
+<h2>RandomForest</h2>
+<ul>
+<li>Sélection des variables <em>à la main</em></li>
+<li>Fine tuning par GridSearchCV</li>
+<li>RMSE 145 325</li>
+</ul>
+</section>
+<section id="xgboost" class="slide level2">
+<h2>XGBoost</h2>
+<ul>
+<li>Log transformations des données</li>
+<li>Deux types de modèles : XGB et LGB</li>
+<li>Sélection des variables avec Lasso et avec un <em>random forest naïf</em></li>
+<li>Fine tuning : RandomizedSearchCV</li>
+<li>Meilleur modèle : LGB avec une sélection Lasso</li>
+<li>RMSE : 140 786</li>
+</ul>
+</section></section>
 <section>
 <section id="limites-et-améliorations" class="title-slide slide level1">
 <h1>Limites et améliorations</h1>

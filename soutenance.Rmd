@@ -67,11 +67,40 @@ knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/carte_filoso
 ```
 
 ##  BPE
-
+- Tables mises à disposition par l'Insee
+- Informations sur le nombre de services disponibles par commune
+  - Répartis en plus de 130 catégories
+- Certains services sont géolocalisables :
+  - Variable indiquant la qualité de la localisation : `Qualite_X_Y`
+  - 95\% de bonne qualité à Paris
 
 ## ville-ideale.fr
+- Site proposant aux internautes de noter leurs quartiers
+- Webscrap
+
+![](https://soutenancensaedvfsbra.netlify.app/ville_ideale.png)
 
 # Modélisation
+
+## SVR (Support Vector Regression)
+
+- Sélection des variables avec la méthode Lasso : 33 variables sélectionnées
+- Noyau choisi : gaussien
+- Fine tuning : RandomizedSearchCV
+- RMSE : 205 309
+
+## RandomForest
+- Sélection des variables *à la main*
+- Fine tuning par GridSearchCV
+- RMSE 145 325
+
+## XGBoost
+- Log transformations des données
+- Deux types de modèles : XGB et LGB
+- Sélection des variables avec Lasso et avec un *random forest naïf*
+- Fine tuning : RandomizedSearchCV
+- Meilleur modèle : LGB avec une sélection Lasso
+- RMSE : 140 786
 
 # Limites et améliorations
 
