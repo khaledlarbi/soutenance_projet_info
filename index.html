@@ -1854,10 +1854,35 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </section>
 <section id="dvf-open" class="slide level2">
 <h2>DVF + open</h2>
+<ul>
+<li><p>Tables mises à disposition par le Céréma :</p>
+<ul>
+<li>Plusieurs tables liées par un identifiant <code>idmutation</code></li>
+<li>Tables contenant des informations sur la localisation des biens (Polygon), d’autres sur la valeur … (table <code>mutation</code>) –&gt; Fusion de ces tables</li>
+</ul></li>
+<li><p>Plus de 60 variables : beaucoup sont similaires</p></li>
+<li><p>Base avec des incohérences.</p>
+<ul>
+<li>Exemple : un bien de 27 m² à 10 000.</li>
+</ul></li>
+<li><p>Définition du champ spatial (Paris) et du type de bien (appartement)</p></li>
+</ul>
+</section>
+<section id="dvf-open-1" class="slide level2">
+<h2>DVF + open</h2>
 <iframe src="https://parismutation.herokuapp.com/main" width="100%" height="700px">
 </iframe>
 </section>
 <section id="filosofi" class="slide level2">
+<h2>Filosofi</h2>
+<ul>
+<li><p>Tables mises à disposition par l’Insee :</p></li>
+<li><p>Information sur le niveau de vie, la démographie, le tissu immobilier à une échelle très locale (carreaux de 200m)</p></li>
+<li><p>Problème : pas de clef <em>a priori</em> pour faire le lien entre la position du bien et le carreau.</p></li>
+<li><p>Solution : vérifier dans quel carreau appartient chaque point –&gt; Chronophage</p></li>
+</ul>
+</section>
+<section id="filosofi-1" class="slide level2">
 <h2>Filosofi</h2>
 <iframe src="https://soutenancensaedvfsbra.netlify.app/carte_filosofi.html" width="100%" height="600px">
 </iframe>
@@ -1873,10 +1898,60 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 </section>
 
+<section>
 <section id="limites-et-améliorations" class="title-slide slide level1">
 <h1>Limites et améliorations</h1>
 
 </section>
+<section id="dvf-open-2" class="slide level2">
+<h2>DVF + open :</h2>
+<ul>
+<li><p>Version open source limité par rapport à la version complète DV3F (version reservée qu’à certains acteurs)</p>
+<ul>
+<li>Informations sur l’ancienneté du bien, l’acheteur et le vendeur disponibles dans DV3F.</li>
+</ul></li>
+<li><p>Peu de variables de la table ont été utilisée lors de la modélisation.</p></li>
+<li><p>Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019</p></li>
+</ul>
+</section>
+<section id="ville-ideale.fr-1" class="slide level2">
+<h2>Ville-ideale.fr</h2>
+<ul>
+<li>Notes données à l’arrondissement : les notes risquent de ne rien apporter en plus que la variable <code>arrondissement</code>.</li>
+<li>Exploiter les commentaires des usagers par arrondissement avec des modèles d’analyse de sentiments par exemple.</li>
+</ul>
+</section>
+<section id="bpe-1" class="slide level2">
+<h2>BPE</h2>
+<ul>
+<li>Utiliser la distance <code>à pied</code> plutôt que la distance euclidiennee.</li>
+<li>Calculer la distance moyenne des n premiers services autour du bien immobilier</li>
+<li>Utiliser des variables : nombre_de_type_service dans un rayon de <em>n</em> km
+<ul>
+<li>Problème : comment choisir <em>n</em> car bruit -|Quid des gros pourvoyeurs d’emploi d’Ile de France</li>
+</ul></li>
+</ul>
+</section>
+<section id="bpe-2" class="slide level2">
+<h2>BPE</h2>
+<ul>
+<li><p>Non prise en compte de la proximité à une station de métro (et à quelle ligne)</p></li>
+<li><p>Variables peu utiles pour la prédiction.</p></li>
+<li><p>Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019</p></li>
+</ul>
+</section>
+<section id="limites-générales" class="slide level2">
+<h2>Limites générales</h2>
+<ul>
+<li>Temps d’entrainement
+<ul>
+<li>Solution : programmation GPU mais pas dispo sur scikit learn</li>
+</ul></li>
+<li>Résultats exceptionnels</li>
+<li>Manque de variables liées aux biens</li>
+<li>Données fournies par le Céréma assez brutes sans traitement</li>
+</ul>
+</section></section>
     </div>
   </div>
 

@@ -36,11 +36,32 @@ Ce projet s'est basé uniquement sur des données disponibles librement sur Inte
 
 ## DVF + open
 
+- Tables mises à disposition par le Céréma :
+  - Plusieurs tables liées par un identifiant `idmutation`
+  - Tables contenant des informations sur la localisation des biens (Polygon), d'autres sur la valeur ... (table `mutation`) --> Fusion de ces tables
+  
+- Plus de 60 variables : beaucoup sont similaires
+
+- Base avec des incohérences.
+  - Exemple : un bien de 27 m² à 10 000.
+  
+- Définition du champ spatial (Paris) et du type de bien (appartement)
+
+## DVF + open
+
 ```{r, out.width="100%"}
 knitr::include_url(url = "https://parismutation.herokuapp.com/main", height = "700px")
 ```
+
 ## Filosofi
 
+- Tables mises à disposition par l'Insee : 
+- Information sur le niveau de vie, la démographie, le tissu immobilier à une échelle très locale (carreaux de 200m)
+
+- Problème : pas de clef *a priori* pour faire le lien entre la position du bien et le carreau.
+- Solution : vérifier dans quel carreau appartient chaque point --> Chronophage
+
+## Filosofi
 ```{r, out.width="100%"}
 knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/carte_filosofi.html", height = "600px")
 ```
@@ -53,3 +74,44 @@ knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/carte_filoso
 # Modélisation
 
 # Limites et améliorations
+
+## DVF + open : 
+
+- Version open source limité par rapport à la version complète DV3F (version reservée qu'à certains acteurs)
+  - Informations sur l'ancienneté du bien, l'acheteur et le vendeur disponibles dans DV3F.
+- Peu de variables de la table ont été utilisée lors de la modélisation.
+
+- Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019
+
+## Ville-ideale.fr
+
+- Notes données à l'arrondissement : les notes risquent de ne rien apporter en plus que la variable `arrondissement`.
+- Exploiter les commentaires des usagers par arrondissement avec des modèles d'analyse de sentiments par exemple.
+
+
+## BPE
+
+- Utiliser la distance `à pied` plutôt que la distance euclidiennee.
+- Calculer la distance moyenne des n premiers services autour du bien immobilier
+- Utiliser des variables : nombre_de_type_service dans un rayon de *n* km
+  - Problème : comment choisir *n* car bruit
+-|Quid des gros pourvoyeurs d'emploi d'Ile de France
+
+
+## BPE
+- Non prise en compte de la proximité à une station de métro (et à quelle ligne)
+
+- Variables peu utiles pour la prédiction.
+
+
+- Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019
+
+
+## Limites générales
+
+- Temps d'entrainement
+  - Solution : programmation GPU mais pas dispo sur scikit learn
+- Résultats exceptionnels
+- Manque de variables liées aux biens
+- Données fournies par le Céréma assez brutes sans traitement
+
