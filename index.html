@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Ensae" />
-  <title>Prédiction de la valeur foncière de bien immobilier à Paris</title>
+  <title>Prédiction de la valeur foncière de biens immobiliers à Paris</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -1780,7 +1780,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <div class="slides">
 
 <section>
-    <h1 class="title">Prédiction de la valeur foncière de bien immobilier à Paris</h1>
+    <h1 class="title">Prédiction de la valeur foncière de biens immobiliers à Paris</h1>
     <h2 class="author">Ensae</h2>
     <h3 class="date">18 décembre 2020</h3>
 </section>
@@ -1904,7 +1904,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </section>
 <section id="bpe-1" class="slide level2">
 <h2>BPE</h2>
-<p>slide with leaflet’s map</p>
+<iframe src="https://soutenancensaedvfsbra.netlify.app/carte_bpe.html" width="100%" height="600px">
+</iframe>
 </section>
 <section id="ville-ideale.fr" class="slide level2">
 <h2>ville-ideale.fr</h2>
@@ -1955,16 +1956,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section id="dvf-open-2" class="slide level2">
 <h2>DVF + open :</h2>
 <ul>
-<li><p>Version open source limitée par rapport à la version complète DV3F (version reservée qu’à certains acteurs)</p>
+<li><p>Version open source limitée par rapport à la version complète DV3F (version réservée qu’à certains acteurs)</p>
 <ul>
 <li>Informations sur l’ancienneté du bien, l’acheteur et le vendeur disponibles dans DV3F.</li>
 </ul></li>
 <li><p>Peu de variables de la table ont été utilisée lors de la modélisation.</p></li>
 <li><p>Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019</p></li>
 </ul>
-</section>
-<section id="dvf-open-3" class="slide level2">
-<h2>DVF + open :</h2>
 </section>
 <section id="ville-ideale.fr-1" class="slide level2">
 <h2>Ville-ideale.fr</h2>
@@ -1977,19 +1975,20 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <h2>BPE</h2>
 <ul>
 <li>Utiliser la distance <code>à pied</code> plutôt que la distance euclidiennee.</li>
-<li>Calculer la distance moyenne des n premiers services autour du bien immobilier</li>
-<li>Utiliser des variables : nombre_de_type_service dans un rayon de <em>n</em> km
+<li>Calculer la distance moyenne des <em>n</em> premiers services autour du bien immobilier</li>
+<li>Utiliser des variables comme <code>nombre_de_type_service</code> dans un rayon de <em>n</em> km
 <ul>
-<li>Problème : comment choisir <em>n</em> car bruit -|Quid des gros pourvoyeurs d’emploi d’Ile de France</li>
+<li>Problème : comment choisir <em>n</em> ?</li>
 </ul></li>
+<li>Quid des gros pourvoyeurs d’emploi franciliens ?</li>
 </ul>
 </section>
 <section id="bpe-3" class="slide level2">
 <h2>BPE</h2>
 <ul>
-<li><p>Non prise en compte de la proximité à une station de métro (et à quelle ligne)</p></li>
-<li><p>Variables peu utiles pour la prédiction.</p></li>
-<li><p>Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019</p></li>
+<li>Non prise en compte de la proximité à une station de métro (quelle ligne ?)</li>
+<li>Variables utilisées peu utiles en réalité pour la prédiction.</li>
+<li>Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019</li>
 </ul>
 </section>
 <section id="limites-générales" class="slide level2">
@@ -1999,7 +1998,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <ul>
 <li>Solution : programmation GPU mais pas dispo sur scikit learn</li>
 </ul></li>
-<li>Résultats exceptionnels</li>
+<li>Résultats pas exceptionnels</li>
 <li>Manque de variables liées aux biens</li>
 <li>Données fournies par le Céréma assez brutes sans traitement</li>
 </ul>
@@ -2007,11 +2006,19 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section id="limites-générales-1" class="slide level2">
 <h2>Limites générales</h2>
 <ul>
-<li><em>Ceteris paribus</em>, le prix des biens augmente d’année en année.</li>
-<li>Nous avons supposé qu’il s’agit d’inflation</li>
+<li><p><em>Ceteris paribus</em>, le prix des biens augmente d’année en année.</p></li>
+<li><p>Nous avons supposé qu’il s’agit d’inflation</p></li>
+<li><p>Mais certains facteurs exogènes peuvent modifier le comportement des acheteurs/vendeurs :</p>
+<ul>
+<li>une politique fiscale visant à pousser les ménages à acheter des biens immobiliers (ex: loi Pinel 2015)</li>
+<li>une changement de mode de consommation des biens immobiliers (ex: Airbnb)</li>
+</ul></li>
 </ul>
-<p>-Mais certains facteurs exogènes peuvent modifier le comportement des acheteurs/vendeurs : -une politique fiscale visant à pousser les ménages à acheter des biens immobiliers (ex: loi Pinel 2015) -une changement de mode de consommation des biens immobiliers (ex: Airbnb)</p>
 </section></section>
+<section id="merci-de-votre-attention" class="title-slide slide level1">
+<h1>Merci de votre attention</h1>
+
+</section>
     </div>
   </div>
 

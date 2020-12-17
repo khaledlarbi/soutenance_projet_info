@@ -130,8 +130,9 @@ bpe_a_garder_2 <- bpe_a_garder[nchar(V1) == 2]
 
 bpe_avec_nom <- merge(bpe_paris_geo, bpe_a_garder_4, by.x = "TYPEQU", by.y = "V1")
 
-bpe_ens_second <- bpe_avec_nom[V2 %in% c("MATERNELLE","CRÈCHE","PRIMAIRE", "COLLÈGE" , "LYCÉE GÉNÉRAL ET TECHNOLOGIQUE" )]
+bpe_ens_lycée <- bpe_avec_nom[V2 %in% c("LYCÉE GÉNÉRAL ET TECHNOLOGIQUE")]
 bpe_theatre <- bpe_avec_nom[V2 %in% "THÉATRE",.(LAMBERT_X,LAMBERT_Y)]
+bpe_ens_boulangerie <- bpe_avec_nom[V2 %in% c("BOULANGERIE")]
 
 
 library(raster)
@@ -150,5 +151,27 @@ lambert_to_wgs <- function(coords,n_sample = 100L){
 }
 
 
-leaflet() %>% addTiles() %>% setView(lat = 48.8534, lng = 2.3488, zoom = 13) %>% 
-  addMarkers(data = lambert_to_wgs(bpe_theatre))
+bpe <- leaflet() %>% addTiles() %>% setView(lat = 48.8534, lng = 2.3488, zoom = 13) %>% 
+  addMarkers(data = lambert_to_wgs(bpe_ens_boulangerie), group = "Boulangerie",
+               icon = list(
+                 iconUrl = 'https://icons.iconarchive.com/icons/google/noto-emoji-food-drink/1024/32371-bread-icon.png',
+                 iconSize = c(30, 30)
+               )
+            ) %>% 
+  addMarkers(data = lambert_to_wgs(bpe_theatre), group = "Théâtre",
+             icon = list(
+               iconUrl = 'https://icons.iconarchive.com/icons/icons8/windows-8/512/Cinema-Theatre-Masks-icon.png',
+               iconSize = c(30, 30)
+             )
+  ) %>% 
+  addMarkers(data = lambert_to_wgs(bpe_ens_lycée), group = "Lycée",
+             icon = list(
+               iconUrl = 'https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Categories-applications-education-university-icon.png',
+               iconSize = c(30, 30)
+             )
+  ) %>% 
+  addLayersControl(baseGroups = c("Théâtre","Boulangerie","Lycée"),
+                   options = layersControlOptions(collapsed = FALSE)
+  ) 
+
+bpe <- saveWidget(bpe, file="carte_bpe.html")

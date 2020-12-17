@@ -1,5 +1,5 @@
 ---
-title: "Prédiction de la valeur foncière de bien immobilier à Paris"
+title: "Prédiction de la valeur foncière de biens immobiliers à Paris"
 author: "Ensae"
 date: "18 décembre 2020"
 output: 
@@ -76,7 +76,9 @@ knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/m.html", hei
 
 ## BPE 
 
-slide with leaflet's map
+```{r, out.width="100%"}
+knitr::include_url(url = "https://soutenancensaedvfsbra.netlify.app/carte_bpe.html", height = "600px")
+```
 
 ## ville-ideale.fr
 - Site proposant aux internautes de noter leurs quartiers
@@ -110,13 +112,11 @@ slide with leaflet's map
 
 ## DVF + open : 
 
-- Version open source limitée par rapport à la version complète DV3F (version reservée qu'à certains acteurs)
+- Version open source limitée par rapport à la version complète DV3F (version réservée qu'à certains acteurs)
   - Informations sur l'ancienneté du bien, l'acheteur et le vendeur disponibles dans DV3F.
 - Peu de variables de la table ont été utilisée lors de la modélisation.
 
 - Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019
-
-## DVF + open : 
 
 
 ## Ville-ideale.fr
@@ -128,18 +128,16 @@ slide with leaflet's map
 ## BPE
 
 - Utiliser la distance `à pied` plutôt que la distance euclidiennee.
-- Calculer la distance moyenne des n premiers services autour du bien immobilier
-- Utiliser des variables : nombre_de_type_service dans un rayon de *n* km
-  - Problème : comment choisir *n* car bruit
--|Quid des gros pourvoyeurs d'emploi d'Ile de France
+- Calculer la distance moyenne des *n* premiers services autour du bien immobilier
+- Utiliser des variables comme `nombre_de_type_service` dans un rayon de *n* km
+  - Problème : comment choisir *n* ?
+- Quid des gros pourvoyeurs d'emploi franciliens ?
 
 
 ## BPE
-- Non prise en compte de la proximité à une station de métro (et à quelle ligne)
 
-- Variables peu utiles pour la prédiction.
-
-
+- Non prise en compte de la proximité à une station de métro (quelle ligne ?)
+- Variables utilisées peu utiles en réalité pour la prédiction.
 - Information à une date donnée alors que les mutations ont lieu entre 2014 et 2019
 
 
@@ -147,7 +145,7 @@ slide with leaflet's map
 
 - Temps d'entrainement
   - Solution : programmation GPU mais pas dispo sur scikit learn
-- Résultats exceptionnels
+- Résultats pas exceptionnels
 - Manque de variables liées aux biens
 - Données fournies par le Céréma assez brutes sans traitement
 
@@ -156,6 +154,8 @@ slide with leaflet's map
 - *Ceteris paribus*, le prix des biens augmente d'année en année.
 - Nous avons supposé qu'il s'agit d'inflation
 
--Mais certains facteurs exogènes peuvent modifier le comportement des acheteurs/vendeurs :
-  -une politique fiscale visant à pousser les ménages à acheter des biens immobiliers (ex: loi Pinel 2015)
-  -une changement de mode de consommation des biens immobiliers (ex: Airbnb)
+- Mais certains facteurs exogènes peuvent modifier le comportement des acheteurs/vendeurs :
+  - une politique fiscale visant à pousser les ménages à acheter des biens immobiliers (ex: loi Pinel 2015)
+  - une changement de mode de consommation des biens immobiliers (ex: Airbnb)
+  
+# Merci de votre attention
