@@ -151,3 +151,11 @@ slide with leaflet's map
 - Manque de variables liées aux biens
 - Données fournies par le Céréma assez brutes sans traitement
 
+## Limites générales
+
+- *Ceteris paribus*, le prix des biens augmente d'année en année.
+- Nous avons supposé qu'il s'agit d'inflation
+
+-Mais certains facteurs exogènes peuvent modifier le comportement des acheteurs/vendeurs :
+  -une politique fiscale visant à pousser les ménages à acheter des biens immobiliers (ex: loi Pinel 2015)
+  -une changement de mode de consommation des biens immobiliers (ex: Airbnb)
